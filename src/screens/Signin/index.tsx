@@ -1,16 +1,30 @@
 import React from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, StatusBar } from 'react-native';
+
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { InputText } from '../../components/InputText';
+import { Header } from '../../components/Header';
 
 import { styles } from './styles';
 
 export function Signin() {
   return (
     <View style={styles.container}>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      <Header />
+
       <View style={styles.content}>
-        <InputText title="Email" />
+        <InputText title="Email"
+          autoCapitalize="none"
+          autoCorrect={false}
+        />
         <InputText title="Senha"
+          autoCorrect={false}
+          autoCapitalize="none"
           secureTextEntry={true}
         />
         <View style={styles.buttonIcon}>
@@ -20,13 +34,14 @@ export function Signin() {
           />
         </View>
 
-        <Text style={styles.text}>
-          Esqueceu seus dados de login?
-        </Text>
-        <Text style={styles.textBold}>
-          Obtenha ajuda para entrar
-        </Text>
-
+        <View style={styles.contentText}>
+          <Text style={styles.text}>
+            Esqueceu seus dados de login?
+          </Text>
+          <Text style={styles.textBold}>
+            Obtenha ajuda para entrar
+          </Text>
+        </View>
       </View>
       <View style={styles.footer}>
 
@@ -38,6 +53,8 @@ export function Signin() {
         </Text>
 
       </View>
+
     </View>
+
   );
 }

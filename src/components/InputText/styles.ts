@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: theme.fonts.title,
     color: theme.colors.textColorWhite,
-    margin: 0,
   },
   input: {
     width: 280,
