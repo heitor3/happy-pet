@@ -1,5 +1,9 @@
 import React from 'react';
-import { View, Text, TextInput, StatusBar } from 'react-native';
+import {
+  View,
+  Text,
+  StatusBar
+} from 'react-native';
 
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { InputText } from '../../components/InputText';

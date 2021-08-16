@@ -9,9 +9,9 @@ export const theme = {
 
   fonts: {
     titleHeader: "DMSerifText_400Regular",
-    title: "Inter_500Medium",
-    text: "Inter_400Regular",
-    textBold: "Inter_600SemiBold"
+    titleMedium: "Roboto_500Medium",
+    textRegular: "Roboto_400Regular",
+    textBold: "Roboto_700Bold"
   }
 };
 
