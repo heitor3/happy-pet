@@ -8,13 +8,12 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.secondaryColorPurple,
     borderRadius: 30,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   title: {
-    flex: 1,
-    textAlign: 'center',
-    fontSize: 24,
-    fontFamily: theme.fonts.title,
+    fontSize: 20,
+    fontFamily: theme.fonts.textRegular,
     color: theme.colors.textColorWhite,
   }
 });

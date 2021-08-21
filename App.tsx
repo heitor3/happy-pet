@@ -4,8 +4,9 @@ import { DMSerifText_400Regular } from '@expo-google-fonts/dm-serif-text';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 
-import { Signin } from './src/screens/Signin';
 import { Home } from './src/screens/Home';
+import { Signin } from './src/screens/Signin';
+import { Search } from './src/screens/Search';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,6 +21,6 @@ export default function App() {
   }
 
   return (
-    <Home />
+    <Search />
   );
 }
