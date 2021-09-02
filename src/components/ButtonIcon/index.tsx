@@ -1,15 +1,12 @@
 import React from "react";
-import {
-  Text,
-  TouchableOpacity,
-  TouchableOpacityProps,
-} from 'react-native';
+import { Text } from 'react-native';
+import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 
 import { Feather } from '@expo/vector-icons';
 
 import { styles } from './styles';
 
-type Props = TouchableOpacityProps & {
+type Props = RectButtonProps & {
   title: string;
   name?: any;
   color?: string;
@@ -18,7 +15,7 @@ type Props = TouchableOpacityProps & {
 
 export function ButtonIcon({ title, name, color, size, ...rest }: Props) {
   return (
-    <TouchableOpacity
+    <RectButton
       style={styles.container}
       {...rest}
     >
@@ -31,6 +28,6 @@ export function ButtonIcon({ title, name, color, size, ...rest }: Props) {
           size={size}
         />
       </Text>
-    </TouchableOpacity>
+    </RectButton>
   );
 }

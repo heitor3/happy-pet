@@ -17,28 +17,24 @@ export function Home() {
 
         <View style={styles.buttonAction}>
           <ButtonAction
-            activeOpacity={0.7}
             title="Adotar Pet ❤"
           />
         </View>
 
         <View style={styles.buttonAction}>
           <ButtonAction
-            activeOpacity={0.7}
             title="Cadastrar Pet 📝"
           />
         </View>
 
         <View style={styles.buttonAction}>
           <ButtonAction
-            activeOpacity={0.7}
             title="Meus cadastros 📄"
           />
         </View>
 
         <View style={styles.buttonAction}>
           <ButtonAction
-            activeOpacity={0.7}
             title="Fazer doação 💸"
           />
         </View>

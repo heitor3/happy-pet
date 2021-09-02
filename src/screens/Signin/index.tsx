@@ -11,7 +11,7 @@ import { Header } from '../../components/Header';
 
 import { styles } from './styles';
 
-export function Signin() {
+export function SignIn() {
   return (
     <View style={styles.container}>
       <StatusBar
@@ -34,7 +34,6 @@ export function Signin() {
         <View style={styles.buttonIcon}>
           <ButtonIcon
             title="Entrar"
-            activeOpacity={0.7}
           />
         </View>
 

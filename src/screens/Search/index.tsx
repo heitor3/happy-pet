@@ -31,7 +31,6 @@ export function Search() {
           name={"search"}
           size={20}
           color={theme.colors.textColorWhite}
-          activeOpacity={0.7}
         />
       </View>
 

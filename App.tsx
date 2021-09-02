@@ -5,8 +5,10 @@ import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 
 import { Home } from './src/screens/Home';
-import { Signin } from './src/screens/Signin';
+import { SignIn } from './src/screens/SignIn';
 import { Search } from './src/screens/Search';
+import { StatusBar } from 'react-native';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -21,6 +23,16 @@ export default function App() {
   }
 
   return (
-    <Search />
+    <>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+
+      <SignIn />
+      {/* <Routes /> */}
+      {/* terminar a navegação apos criar as telas finais */}
+    </>
   );
 }
