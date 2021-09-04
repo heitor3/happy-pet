@@ -7,6 +7,7 @@ import { useFonts } from 'expo-font';
 import { Home } from './src/screens/Home';
 import { SignIn } from './src/screens/SignIn';
 import { Search } from './src/screens/Search';
+import { Welcome } from './src/screens/Welcome';
 import { StatusBar } from 'react-native';
 import { Routes } from './src/routes';
 
@@ -30,7 +31,7 @@ export default function App() {
         translucent
       />
 
-      <SignIn />
+      <Welcome />
       {/* <Routes /> */}
       {/* terminar a navegação apos criar as telas finais */}
     </>

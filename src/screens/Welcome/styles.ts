@@ -8,39 +8,38 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.primaryColorBlack,
   },
   content: {
-    justifyContent: 'center',
+    marginTop: 66,
     alignItems: 'center',
-    marginTop: 37,
-  },
-  buttonIcon: {
-    marginTop: 5
-  },
-  contentText: {
-    height: 100,
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
+    textAlign: 'center',
   },
   text: {
-    fontSize: 12,
+    fontSize: 18,
     fontFamily: theme.fonts.textRegular,
     color: theme.colors.textColorWhite,
-    marginBottom: 10
   },
-  textBold: {
-    fontSize: 12,
-    fontFamily: theme.fonts.textBold,
-    color: theme.colors.textColorWhite
+  text2: {
+    fontSize: 18,
+    fontFamily: theme.fonts.textRegular,
+    color: theme.colors.textColorWhite,
+    marginTop: 10,
   },
-
-
-  footer: {
-    flex: 1,
+  buttonArea: {
     width: '100%',
-    borderTopColor: theme.colors.secondaryColorPurple,
-    borderWidth: 2,
+    marginTop: 82,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20
+  },
+  contentButton: {
     alignItems: 'center',
     justifyContent: 'center',
+    textAlign: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontFamily: theme.fonts.textBold,
+    color: theme.colors.textColorWhite,
   }
+
 
 });
