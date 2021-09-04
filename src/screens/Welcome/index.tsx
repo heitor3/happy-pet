@@ -3,7 +3,10 @@ import {
   View,
   Text,
 } from 'react-native';
+import { ButtonCreateUser } from '../../components/ButtonCreateUser';
 import { Header } from '../../components/Header';
+import UsuarioIcon from '../../assets/iconUsuario.png';
+import ONGIcon from '../../assets/iconONG.png';
 
 import { styles } from './styles';
 
@@ -29,14 +32,24 @@ export function Welcome() {
           <Text style={styles.title}>
             Usuário
           </Text>
-          {/* component button choice? */}
+          <ButtonCreateUser
+            source={UsuarioIcon}
+            width={1}
+            height={1}
+            resizeMode={"center"}
+          />
         </View>
 
         <View style={styles.contentButton}>
           <Text style={styles.title}>
             ONG
           </Text>
-          {/* component button choice? */}
+          <ButtonCreateUser
+            source={ONGIcon}
+            width={1}
+            height={1}
+            resizeMode={"center"}
+          />
         </View>
       </View>
 
