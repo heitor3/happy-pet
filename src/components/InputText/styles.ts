@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    fontFamily: theme.fonts.title,
+    fontFamily: theme.fonts.titleMedium,
     color: theme.colors.textColorWhite,
   },
   input: {
@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     borderBottomColor: theme.colors.secondaryColorPurple,
     textAlign: 'center',
     fontSize: 16,
-    fontFamily: theme.fonts.text,
+    fontFamily: theme.fonts.textRegular,
     color: theme.colors.textColorWhite,
     lineHeight: 30,
     marginBottom: 30

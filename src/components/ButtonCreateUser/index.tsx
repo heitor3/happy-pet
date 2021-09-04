@@ -8,7 +8,9 @@ type Props = RectButtonProps & ImageProps & {
 }
 export function ButtonCreateUser({ source, ...rest }: Props) {
   return (
-    <RectButton style={styles.container}>
+    <RectButton style={styles.container}
+      {...rest}
+    >
       <Image
         {...rest}
         source={source}

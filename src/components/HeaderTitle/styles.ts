@@ -4,15 +4,16 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
-    height: 258,
-    paddingTop: getStatusBarHeight(),
-    width: '100%',
+    justifyContent: 'center',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    width: '100%',
+    height: 170,
+    paddingTop: getStatusBarHeight(),
     backgroundColor: theme.colors.primaryColorBlack,
   },
-  image: {
-    height: 133.7,
-    width: 143.64,
+  title: {
+    fontSize: 36,
+    fontFamily: theme.fonts.titleHeader,
+    color: theme.colors.secondaryColorPurple,
   },
 });
