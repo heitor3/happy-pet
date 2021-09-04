@@ -5,19 +5,14 @@ import { styles } from "./styles";
 
 type Props = RectButtonProps & ImageProps & {
   source?: any;
-  width: number;
-  height: number;
-  resizeMode: string;
 }
-export function ButtonCreateUser({ source, width, height, resizeMode, ...rest }: Props) {
+export function ButtonCreateUser({ source, ...rest }: Props) {
   return (
     <RectButton style={styles.container}>
       <Image
+        {...rest}
         source={source}
         style={styles.image}
-        width={width}
-        height={height}
-        resizeMode={resizeMode}
       />
     </RectButton>
   );

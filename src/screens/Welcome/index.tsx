@@ -34,9 +34,7 @@ export function Welcome() {
           </Text>
           <ButtonCreateUser
             source={UsuarioIcon}
-            width={1}
-            height={1}
-            resizeMode={"center"}
+            resizeMode="contain"
           />
         </View>
 
@@ -46,9 +44,7 @@ export function Welcome() {
           </Text>
           <ButtonCreateUser
             source={ONGIcon}
-            width={1}
-            height={1}
-            resizeMode={"center"}
+            resizeMode="contain"
           />
         </View>
       </View>

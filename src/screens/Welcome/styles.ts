@@ -25,10 +25,10 @@ export const styles = StyleSheet.create({
   },
   buttonArea: {
     width: '100%',
-    marginTop: 82,
+    marginTop: 85,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 20
+    paddingHorizontal: 24
   },
   contentButton: {
     alignItems: 'center',
@@ -37,9 +37,10 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
+    marginBottom: 20,
     fontFamily: theme.fonts.textBold,
     color: theme.colors.textColorWhite,
-  }
+  },
 
 
 });
