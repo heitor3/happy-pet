@@ -9,6 +9,6 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.primaryColorBlack,
   },
   buttonIcon: {
-    marginBottom: 20
+    marginBottom: 20,
   }
 });

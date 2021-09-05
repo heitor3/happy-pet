@@ -11,7 +11,7 @@ import { InputText } from "../../components/InputText";
 
 import { styles } from "./styles";
 
-export function CreateUser() {
+export function CreateOng() {
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -21,7 +21,7 @@ export function CreateUser() {
 
         <View style={styles.container}>
           <HeaderTitle
-            title="Cadastrar usuário"
+            title="Cadastro ONG"
           />
           <View >
             <View>
@@ -36,7 +36,17 @@ export function CreateUser() {
             </View>
             <View>
               <InputText
+                title="CNPJ"
+              />
+            </View>
+            <View>
+              <InputText
                 title="Celular"
+              />
+            </View>
+            <View>
+              <InputText
+                title="Chave PIX"
               />
             </View>
             <View>

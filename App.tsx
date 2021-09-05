@@ -9,6 +9,7 @@ import { SignIn } from './src/screens/SignIn';
 import { Search } from './src/screens/Search';
 import { Welcome } from './src/screens/Welcome';
 import { CreateUser } from './src/screens/CreateUser';
+import { CreateOng } from './src/screens/CreateOng';
 import { StatusBar } from 'react-native';
 import { Routes } from './src/routes';
 
@@ -32,7 +33,7 @@ export default function App() {
         translucent
       />
 
-      <CreateUser />
+      <CreateOng />
       {/* <Routes /> */}
       {/* terminar a navegação apos criar as telas finais */}
     </>
