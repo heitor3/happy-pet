@@ -10,6 +10,7 @@ import { Search } from './src/screens/Search';
 import { Welcome } from './src/screens/Welcome';
 import { CreateUser } from './src/screens/CreateUser';
 import { CreateOng } from './src/screens/CreateOng';
+import { CreatePet } from './src/screens/CreatePet';
 import { StatusBar } from 'react-native';
 import { Routes } from './src/routes';
 
@@ -33,7 +34,7 @@ export default function App() {
         translucent
       />
 
-      <CreateOng />
+      <CreatePet />
       {/* <Routes /> */}
       {/* terminar a navegação apos criar as telas finais */}
     </>
