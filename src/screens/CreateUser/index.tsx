@@ -36,7 +36,7 @@ export function CreateUser() {
             </View>
             <View>
               <InputText
-                title="Celular"
+                title="Whatsapp"
               />
             </View>
             <View>

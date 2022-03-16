@@ -41,7 +41,7 @@ export function CreateOng() {
             </View>
             <View>
               <InputText
-                title="Celular"
+                title="Whatsapp"
               />
             </View>
             <View>

@@ -15,7 +15,7 @@ import { InputText } from "../../components/InputText";
 export function Search() {
   return (
     <View style={styles.container}>
-      <Header />
+      
 
       <View style={styles.content}>
         <View style={styles.inputTextArea}>

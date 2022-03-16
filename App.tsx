@@ -34,7 +34,7 @@ export default function App() {
         translucent
       />
 
-      <CreatePet />
+      <Search />
       {/* <Routes /> */}
       {/* terminar a navegação apos criar as telas finais */}
     </>

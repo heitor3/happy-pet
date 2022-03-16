@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
     marginTop: 95
   },
   inputTextArea: {
-    marginBottom: 50
+    marginBottom: 10
   },
 
 });
