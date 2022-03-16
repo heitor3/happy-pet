@@ -9,10 +9,12 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.primaryColorBlack,
   },
   content: {
-    marginTop: 95
+    marginTop: 95,
+    marginBottom: 20
   },
   inputTextArea: {
     marginBottom: 10
   },
+  list: {},
 
 });

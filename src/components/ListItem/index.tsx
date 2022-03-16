@@ -8,7 +8,6 @@ import { theme } from "../../global/styles/theme";
 
 
 type Props = RectButtonProps & {
-    id: string;
     name: string;
     city: string;
     uf: string;
@@ -17,11 +16,11 @@ type Props = RectButtonProps & {
 }
 
 export function ListItem({ name, city, uf, uri, ...rest }: Props) {
-    uri = "https://s2.glbimg.com/DVfIiTGl-KnJU41UcD9Yoj33MZM=/e.glbimg.com/og/ed/f/original/2021/06/16/doge.jpg";
     return (
         <RectButton
             style={styles.container}
             {...rest}
+            activeOpacity={0.7}
         >
             <View>
                 <Image
@@ -31,15 +30,14 @@ export function ListItem({ name, city, uf, uri, ...rest }: Props) {
                 />
             </View>
             <View style={styles.content}>
-                <View>
-                    <Text style={styles.name}>{name}</Text>
-                    <Text style={styles.city}>{city + " - " + uf}</Text>
-                </View>
-
+                <Text style={styles.name}>{name}</Text>
+                <Text style={styles.city}>{city + " - " + uf}</Text>
+            </View>
+            <View>
                 <Entypo
                     name="chevron-thin-right"
                     color={theme.colors.textColorWhite}
-                    size={12}
+                    size={16}
                 />
             </View>
 

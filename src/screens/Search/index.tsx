@@ -11,11 +11,15 @@ import { theme } from "../../global/styles/theme";
 
 import { styles } from "./styles";
 import { InputText } from "../../components/InputText";
+import { FlatList } from "react-native-gesture-handler";
+import { ListItem } from "../../components/ListItem";
+
+import results from "../../../results";
 
 export function Search() {
   return (
     <View style={styles.container}>
-      
+
 
       <View style={styles.content}>
         <View style={styles.inputTextArea}>
@@ -33,6 +37,22 @@ export function Search() {
           color={theme.colors.textColorWhite}
         />
       </View>
+
+      <FlatList
+        data={results}
+        style={styles.list}
+        renderItem={({ item }) =>
+          <ListItem
+            name={item.name}
+            city={item.city}
+            uf={item.uf}
+            uri={item.uri}
+          />
+        }
+        keyExtractor={(item) => item.id}
+      />
+
+
 
     </View>
   );
