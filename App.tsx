@@ -13,6 +13,7 @@ import { CreateOng } from './src/screens/CreateOng';
 import { CreatePet } from './src/screens/CreatePet';
 import { StatusBar } from 'react-native';
 import { Routes } from './src/routes';
+import { DetailsPet } from './src/screens/DetailsPet';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -34,7 +35,7 @@ export default function App() {
         translucent
       />
 
-      <Search />
+      <DetailsPet />
       {/* <Routes /> */}
       {/* terminar a navegação apos criar as telas finais */}
     </>

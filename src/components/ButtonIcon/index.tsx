@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from 'react-native';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 
-import { Feather } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 import { styles } from './styles';
 
@@ -22,7 +22,7 @@ export function ButtonIcon({ title, name, color, size, ...rest }: Props) {
       <Text style={styles.title}>
         {title}
         {" "}
-        <Feather
+        <FontAwesome
           name={name}
           color={color}
           size={size}
