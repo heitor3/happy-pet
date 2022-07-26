@@ -3,12 +3,13 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1,    
     backgroundColor: theme.colors.primaryColorBlack,
+    display: 'flex',
     alignItems: 'center',
   },
   card: {
-    height: 614,
+    height: '90%',
     width: 363,
     borderRadius: 10,
     marginTop: 46,
@@ -27,19 +28,19 @@ export const styles = StyleSheet.create({
     height: 240,
     width: 350,
     borderRadius: 10,
-    
+    alignItems: 'center',
   },
   info: {
     width: '100%',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    marginTop: 42,
-    marginBottom: 26,
+    marginTop: 32,
+    marginBottom: 30,
   },
   infoContent: {
     fontFamily: theme.fonts.textBold,
-    fontSize: 10,
+    fontSize: 12,
     color: theme.colors.textColorWhite,
   },
   descriptionContent: {
@@ -51,18 +52,19 @@ export const styles = StyleSheet.create({
   descriptionTitle: {
     marginBottom: 10,
     fontFamily: theme.fonts.titleMedium,
-    fontSize: 12,
+    fontSize: 14,
     color: theme.colors.textColorWhite,
     textAlign: "center"
   },
   descriptionText: {
     fontFamily: theme.fonts.textRegular,
-    fontSize: 10,
+    fontSize: 12,
     color: theme.colors.textColorWhite,
-    marginHorizontal: 43.5
+    marginHorizontal: 36,
+    maxHeight: 350,
   },
   buttonContainer: {
     justifyContent: 'flex-end',
-    marginVertical: 20
+    marginVertical: 40
   },
 });

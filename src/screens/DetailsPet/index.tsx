@@ -16,30 +16,29 @@ export function DetailsPet() {
   const uri = "https://s2.glbimg.com/DVfIiTGl-KnJU41UcD9Yoj33MZM=/e.glbimg.com/og/ed/f/original/2021/06/16/doge.jpg"
   return (
 
-    <View >
-      <Header />
+    <>
+      {/* <Header /> */}
       <View style={styles.container}>
-
         <View style={styles.card}>
           <Text style={styles.name}>
             {"TESTE"}
           </Text>
-          <View>
-            <Image
-              style={styles.imgPet}
-              source={{ uri }}
-              resizeMode="cover"
-            />
-            <View style={styles.info}>
-              <Text style={styles.infoContent}>{"teste"}</Text>
-              <Text style={styles.infoContent}>Porte: {"teste"}</Text>
-              <Text style={styles.infoContent}>Idade: {"teste"}</Text>
-              <Text style={styles.infoContent}>{"teste"}</Text>
-            </View>
+
+          <Image
+            style={styles.imgPet}
+            source={{ uri }}
+            resizeMode="cover"
+          />
+          <View style={styles.info}>
+            <Text style={styles.infoContent}>{"teste"}</Text>
+            <Text style={styles.infoContent}>Porte: {"teste"}</Text>
+            <Text style={styles.infoContent}>Idade: {"teste"}</Text>
+            <Text style={styles.infoContent}>{"teste"}</Text>
           </View>
+
+          <Text style={styles.descriptionTitle}>Descrição</Text>
           <ScrollView style={styles.descriptionContent}>
-            <Text style={styles.descriptionTitle}>Descrição</Text>
-            <Text style={styles.descriptionText}>{"teste"}</Text>
+            <Text style={styles.descriptionText}>{"teste teste teste  teste teste teste teste teste teste testeteste testeteste teste teste testeteste testeteste teste te dwa çiug loaiukgd loawiudy lawiudhlawkdjhwald kijhawldiu khawlidkhalwdkjhwaldkjhawdlkjwhalkdjhawldkjawhdlawkjdhawlkj hlkawjhdlka jhdlwkjahdlawkjdhawlkjste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testetesteteste testeteste teste teste testeteste testeteste teste teste testeteste testetesteteste teste"}</Text>
           </ScrollView>
           <View style={styles.buttonContainer}>
             <ButtonIcon
@@ -51,6 +50,6 @@ export function DetailsPet() {
           </View>
         </View>
       </View>
-    </View>
+    </>
   );
 }
