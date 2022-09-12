@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image, Text } from "react-native";
-import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
+import { RectButton, RectButtonProps, } from 'react-native-gesture-handler';
 import { Entypo } from '@expo/vector-icons';
 
 import { styles } from "./styles";
@@ -11,11 +11,11 @@ type Props = RectButtonProps & {
     name: string;
     city: string;
     uf: string;
-    uri: string;
+    screenShot: string;
 
 }
 
-export function ListItem({ name, city, uf, uri, ...rest }: Props) {
+export function ListItem({ name, city, uf, screenShot, ...rest }: Props) {
     return (
         <RectButton
             style={styles.container}
@@ -24,7 +24,7 @@ export function ListItem({ name, city, uf, uri, ...rest }: Props) {
         >
             <View>
                 <Image
-                    source={{ uri }}
+                    source={{uri: screenShot}}
                     style={styles.imgPet}
                     resizeMode="cover"
                 />

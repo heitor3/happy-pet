@@ -34,10 +34,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-
-      <CreatePet />
-      {/* <Routes /> */}
-      {/* terminar a navegação apos criar as telas finais */}
+      <Routes />
     </>
   );
 }

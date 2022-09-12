@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   buttonIcon: {
     marginBottom: 20
   },
-  dropdownLabel:{
+  dropdownLabel: {
     fontSize: 18,
     fontFamily: theme.fonts.titleMedium,
     color: theme.colors.textColorWhite,
@@ -20,7 +20,6 @@ export const styles = StyleSheet.create({
     height: 50,
     borderColor: '#fff',
     paddingHorizontal: 12,
-    
 
     width: 280,
     borderBottomWidth: 2,
@@ -41,12 +40,12 @@ export const styles = StyleSheet.create({
     zIndex: 999,
     paddingHorizontal: 8,
     fontSize: 14,
-    
+
   },
   placeholderStyle: {
     fontSize: 16,
     color: '#fff',
-    margin: -14,
+    textAlign: 'center'
 
   },
   selectedTextStyle: {
@@ -57,21 +56,18 @@ export const styles = StyleSheet.create({
   },
   DropContainer: {
     borderWidth: 0,
-    backgroundColor: theme.colors.primaryColorBlack
-  }
-});
-
-
-/**
- * import { theme } from '../../global/styles/theme';
- * 
- * title: {
-    fontSize: 18,
-    fontFamily: theme.fonts.titleMedium,
+    marginTop: -20,
+    backgroundColor: '#A6A6A6',
+    fontFamily: theme.fonts.textRegular,
     color: theme.colors.textColorWhite,
+    textAlign: 'center',
   },
-  input: {
-    width: 280,
+  cityContainer: {
+    flexDirection: 'row',
+    width: 200,
+  },
+  city: {
+    width: '60%',
     borderBottomWidth: 2,
     borderBottomColor: theme.colors.secondaryColorPurple,
     textAlign: 'center',
@@ -81,6 +77,27 @@ export const styles = StyleSheet.create({
     lineHeight: 30,
     marginBottom: 30
   },
- * 
- * 
- */
+  uf: {
+    width: '40%',
+    borderBottomWidth: 2,
+    borderBottomColor: theme.colors.secondaryColorPurple,
+    textAlign: 'center',
+    fontSize: 16,
+    fontFamily: theme.fonts.textRegular,
+    color: theme.colors.textColorWhite,
+    lineHeight: 30,
+    marginBottom: 30
+  },
+  description: {
+    width: 280,
+    borderBottomWidth: 2,
+    borderBottomColor: theme.colors.secondaryColorPurple,
+    textAlign: "justify",
+    fontSize: 16,
+    fontFamily: theme.fonts.textRegular,
+    color: theme.colors.textColorWhite,
+    lineHeight: 30,
+    marginBottom: 30
+  },
+  
+});

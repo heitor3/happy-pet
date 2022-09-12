@@ -1,36 +1,41 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import { SignIn } from '../screens/SignIn';
 import { Home } from '../screens/Home';
 import { Search } from '../screens/Search';
+import { CreatePet } from '../screens/CreatePet';
+import { DetailsPet } from '../screens/DetailsPet';
 
 
-const { Navigator, Screen } = createNativeStackNavigator();
+const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes() {
   return (
-    <Navigator
-      screenOptions={{
-        contentStyle: {
-          backgroundColor: 'transparent',
-        },
-        headerShown: false,
-      }}
-    >
-      <Screen
-        name="SignIn"
-        component={SignIn}
-
-      />
-      <Screen
-        name="Home"
-        component={Home}
-      />
-      <Screen
-        name="Search"
-        component={Search}
-      />
-    </Navigator>
+    <NavigationContainer independent={true}>
+      <Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Screen
+          name="Home"
+          component={Home}
+        />
+        <Screen
+          name="Search"
+          component={Search}
+        />
+        <Screen
+          name="CreatePet"
+          component={CreatePet}
+        />
+        <Screen
+          name="DetailsPet"
+          component={DetailsPet}
+        />
+      </Navigator>
+    </NavigationContainer>
   );
 }
