@@ -15,7 +15,7 @@ import { InputText } from "../../components/InputText";
 import { FlatList } from "react-native-gesture-handler";
 import { ListItem } from "../../components/ListItem";
 
-// import results from "../../../results";
+import results from "../../../results";
 import { useNavigation } from "@react-navigation/native";
 import api from "../../service/api";
 
@@ -39,86 +39,83 @@ interface PetList {
 
 export function Search() {
   const { navigate } = useNavigation<Nav>();
-  const [results, setResults] = useState<PetList[]>([]);
+  // const [results, setResults] = useState<PetList[]>([]);
+  // const [list, setList] = useState<PetList[]>(results);
   const [list, setList] = useState(results);
-  // const [list, setList] = useState(results);
   const [searchInputValue, setSearchInputValue] = useState("");
 
+  // useEffect(() => {
+  //   console.log("REQUEST")
+  //   api.get("list").then(response => {
+  //     setResults(response.data);
+  //   });
+  // }, []);
 
+  // useEffect(() => {
+  //   console.log("LIST ", list)
+  //   setList(results)
+  // }, [results]);
 
-  useEffect(() => {
-    console.log("REQUEST")
-    api.get("list").then(response => {
-      setResults(response.data);
-    });
-  }, []);
+  function handleDetailsPet() {
+    navigate('DetailsPet', {
+      item: {
+        list: list
+      },
+    })
+}
 
-  useEffect(() => {
-    console.log("LIST ", list)
+function searchPet() {
+  const filter = searchInputValue.toLowerCase()
+
+  if (filter === '') {
     setList(results)
-  }, [results]);
-
-
-
-  function alert() {
-    navigate("DetailsPet")
-  }
-
-  function searchPet() {
-    const filter = searchInputValue.toLowerCase()
-
-    if (filter === '') {
-      setList(results)
-    } else {
-      setList(
-        results.filter(
-          (item) =>
-            item.city.toLowerCase().indexOf(filter) > -1
-        )
+  } else {
+    setList(
+      results.filter(
+        (item) =>
+          item.city.toLowerCase().indexOf(filter) > -1
       )
-    }
+    )
   }
+}
 
-  return (
-    <View style={styles.container}>
+return (
+  <View style={styles.container}>
 
-
-      <View style={styles.content}>
-        <View style={styles.inputTextArea}>
-          <InputText
-            title="Filtrar busca"
-            value={searchInputValue}
-            onChangeText={(value) => { setSearchInputValue(value) }}
-            placeholder="Exemplos: cidade, porte ou espécie"
-            placeholderTextColor={theme.colors.placeHoldeColorOpacityGrey}
-          />
-        </View>
-
-        <ButtonIcon
+    <View style={styles.content}>
+      <View style={styles.inputTextArea}>
+        <InputText
           title="Filtrar busca"
-          name={"search"}
-          onPress={searchPet}
-          size={20}
-          color={theme.colors.textColorWhite}
+          value={searchInputValue}
+          onChangeText={(value) => { setSearchInputValue(value) }}
+          placeholder="Exemplos: cidade, porte ou espécie"
+          placeholderTextColor={theme.colors.placeHoldeColorOpacityGrey}
         />
       </View>
 
-      <FlatList
-        data={list}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) =>
-          <ListItem
-            name={item.name}
-            city={item.city}
-            uf={item.uf}
-            screenShot={item.animalSpecies.screenShot}
-            onPress={alert}
-          />
-        }
+      <ButtonIcon
+        title="Filtrar busca"
+        name={"search"}
+        onPress={searchPet}
+        size={20}
+        color={theme.colors.textColorWhite}
       />
-
-
-
     </View>
-  );
+
+    <FlatList
+      data={list}
+      keyExtractor={(item) => String(item.id)}
+      renderItem={({ item }) =>
+        <ListItem
+          name={item.name}
+          city={item.city}
+          uf={item.uf}
+          screenShot={item.animalSpecies.screenShot}
+          onPress={handleDetailsPet}
+        />
+      }
+    />
+
+  </View>
+);
 }

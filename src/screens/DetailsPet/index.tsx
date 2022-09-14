@@ -12,7 +12,25 @@ import { styles } from "./styles";
 import { ScrollView } from "react-native-gesture-handler";
 //https://app.rocketseat.com.br/node/mission-react-native/group/nlw-together-react-native/lesson/aula-03-in-orbit-2
 
-export function DetailsPet() {
+type PetList = {
+  id: number;
+  name: string;
+  id_animalSpecies: number;
+  size: string;
+  age: string;
+  city: string;
+  uf: string;
+  description: string;
+  whatsapp: string;
+  user: string;
+  animalSpecies: {
+    id: number;
+    name: string;
+    screenShot: string;
+  }
+}
+
+export function DetailsPet({ ...rest }: PetList) {
   const uri = "https://s2.glbimg.com/DVfIiTGl-KnJU41UcD9Yoj33MZM=/e.glbimg.com/og/ed/f/original/2021/06/16/doge.jpg"
   return (
 

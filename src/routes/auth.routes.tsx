@@ -33,6 +33,7 @@ export function AuthRoutes() {
         />
         <Screen
           name="DetailsPet"
+          initialParams={{ list : Object }}
           component={DetailsPet}
         />
       </Navigator>
