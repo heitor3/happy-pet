@@ -1,4 +1,5 @@
 import React from 'react';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import { Roboto_400Regular, Roboto_500Medium, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import { DMSerifText_400Regular } from '@expo-google-fonts/dm-serif-text';
 import AppLoading from 'expo-app-loading';

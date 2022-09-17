@@ -11,13 +11,13 @@ import { styles } from './styles';
 
 
 export function Home() {
-  const {navigate} = useNavigation<Nav>();
+  const { navigate } = useNavigation();
 
-  function handleSearchPet(){
-    navigate('Search')
+  function handleSearchPet() {
+    navigate('search')
   }
-  function handleCreatePet(){
-    navigate('CreatePet')
+  function handleCreatePet() {
+    navigate('createPet')
   }
 
   return (

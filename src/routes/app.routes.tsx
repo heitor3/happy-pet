@@ -11,7 +11,7 @@ import { DetailsPet } from '../screens/DetailsPet';
 
 const { Navigator, Screen } = createStackNavigator();
 
-export function AuthRoutes() {
+export function AppRoutes() {
   return (
     <NavigationContainer independent={true}>
       <Navigator
@@ -20,20 +20,19 @@ export function AuthRoutes() {
         }}
       >
         <Screen
-          name="Home"
+          name="home"
           component={Home}
         />
         <Screen
-          name="Search"
+          name="search"
           component={Search}
         />
         <Screen
-          name="CreatePet"
+          name="createPet"
           component={CreatePet}
         />
         <Screen
-          name="DetailsPet"
-          initialParams={{ list : Object }}
+          name="detailsPet"
           component={DetailsPet}
         />
       </Navigator>

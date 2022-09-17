@@ -2,36 +2,25 @@ import React from "react";
 import {
   View,
   Text,
-  Image
+  Image,
+  ScrollView
 } from 'react-native';
+
+import { useRoute } from '@react-navigation/native'
+import { PetDetailsParams } from "../../@types/navigation";
+
 import { ButtonIcon } from "../../components/ButtonIcon";
 import { Header } from "../../components/Header";
 
 import results from "../../../results";
 import { styles } from "./styles";
-import { ScrollView } from "react-native-gesture-handler";
-//https://app.rocketseat.com.br/node/mission-react-native/group/nlw-together-react-native/lesson/aula-03-in-orbit-2
 
-type PetList = {
-  id: number;
-  name: string;
-  id_animalSpecies: number;
-  size: string;
-  age: string;
-  city: string;
-  uf: string;
-  description: string;
-  whatsapp: string;
-  user: string;
-  animalSpecies: {
-    id: number;
-    name: string;
-    screenShot: string;
-  }
-}
+
 
 export function DetailsPet({ ...rest }: PetList) {
-  const uri = "https://s2.glbimg.com/DVfIiTGl-KnJU41UcD9Yoj33MZM=/e.glbimg.com/og/ed/f/original/2021/06/16/doge.jpg"
+  const route = useRoute()
+  const pet = route.params as PetDetailsParams;
+
   return (
 
     <>
@@ -39,24 +28,24 @@ export function DetailsPet({ ...rest }: PetList) {
       <View style={styles.container}>
         <View style={styles.card}>
           <Text style={styles.name}>
-            {"TESTE"}
+            {pet.name}
           </Text>
 
           <Image
             style={styles.imgPet}
-            source={{ uri }}
+            source={{ uri: pet.animalSpecies.screenShot }}
             resizeMode="cover"
           />
           <View style={styles.info}>
-            <Text style={styles.infoContent}>{"teste"}</Text>
-            <Text style={styles.infoContent}>Porte: {"teste"}</Text>
-            <Text style={styles.infoContent}>Idade: {"teste"}</Text>
-            <Text style={styles.infoContent}>{"teste"}</Text>
+            <Text style={styles.infoContent}>{pet.name}</Text>
+            <Text style={styles.infoContent}>Porte: {pet.size}</Text>
+            <Text style={styles.infoContent}>Idade: {pet.age}</Text>
+            <Text style={styles.infoContent}>{`${pet.city} - ${pet.uf}`}</Text>
           </View>
 
           <Text style={styles.descriptionTitle}>Descrição</Text>
           <ScrollView style={styles.descriptionContent}>
-            <Text style={styles.descriptionText}>{"teste teste teste  teste teste teste teste teste teste testeteste testeteste teste teste testeteste testeteste teste te dwa çiug loaiukgd loawiudy lawiudhlawkdjhwald kijhawldiu khawlidkhalwdkjhwaldkjhawdlkjwhalkdjhawldkjawhdlawkjdhawlkj hlkawjhdlka jhdlwkjahdlawkjdhawlkjste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testeteste teste teste testeteste testetesteteste testeteste teste teste testeteste testeteste teste teste testeteste testetesteteste teste"}</Text>
+            <Text style={styles.descriptionText}>{pet.description}</Text>
           </ScrollView>
           <View style={styles.buttonContainer}>
             <ButtonIcon
