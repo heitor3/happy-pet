@@ -3,7 +3,8 @@ import {
   View,
   Text,
   Image,
-  ScrollView
+  ScrollView,
+  Linking
 } from 'react-native';
 
 import { useRoute } from '@react-navigation/native'
@@ -20,6 +21,11 @@ import { styles } from "./styles";
 export function DetailsPet({ ...rest }: PetList) {
   const route = useRoute()
   const pet = route.params as PetDetailsParams;
+
+  function handleLinkToWhatsapp(){
+    Linking.openURL(`whatsapp://send?phone=${pet.whatsapp}`)
+  }
+
 
   return (
 
@@ -53,6 +59,7 @@ export function DetailsPet({ ...rest }: PetList) {
               name={"whatsapp"}
               size={20}
               color={"#7CFC00"}
+              onPress={handleLinkToWhatsapp}
             />
           </View>
         </View>

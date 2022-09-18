@@ -25,22 +25,21 @@ import api from "../../service/api";
 
 export function Search() {
   const { navigate } = useNavigation();
-  // const [results, setResults] = useState<PetList[]>([]);
-  // const [list, setList] = useState<PetList[]>(results);
-  const [list, setList] = useState(results);
+  const [results, setResults] = useState<PetList[]>([]);
+  const [list, setList] = useState<PetList[]>(results);
   const [searchInputValue, setSearchInputValue] = useState("");
 
-  // useEffect(() => {
-  //   console.log("REQUEST")
-  //   api.get("list").then(response => {
-  //     setResults(response.data);
-  //   });
-  // }, []);
+  useEffect(() => {
+    console.log("REQUEST")
+    api.get("list").then(response => {
+      setResults(response.data);
+    });
+  }, []);
 
-  // useEffect(() => {
-  //   console.log("LIST ", list)
-  //   setList(results)
-  // }, [results]);
+  useEffect(() => {
+    console.log("LIST ", list)
+    setList(results)
+  }, [results]);
 
   function handleDetailsPet({ name, size, age, city, uf, animalSpecies, description, whatsapp }: PetList) {
     navigate('detailsPet', {
@@ -98,6 +97,8 @@ export function Search() {
         keyExtractor={(item) => String(item.id)}
         renderItem={({ item }) =>
           <ListItem
+            icon="chevron-thin-right"
+            size={16}
             name={item.name}
             city={item.city}
             uf={item.uf}

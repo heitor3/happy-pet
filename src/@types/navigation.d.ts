@@ -19,6 +19,7 @@ export declare global {
       search: undefined;
       createPet: undefined;
       detailsPet: PetDetailsParams;
+      myPets: undefined;
     }
   }
 }

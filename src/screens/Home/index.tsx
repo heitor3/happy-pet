@@ -16,8 +16,13 @@ export function Home() {
   function handleSearchPet() {
     navigate('search')
   }
+
   function handleCreatePet() {
     navigate('createPet')
+  }
+
+  function handleMyPets() {
+    navigate('myPets')
   }
 
   return (
@@ -43,6 +48,7 @@ export function Home() {
         <View style={styles.buttonAction}>
           <ButtonAction
             title="Meus cadastros 📄"
+            onPress={handleMyPets}
           />
         </View>
 

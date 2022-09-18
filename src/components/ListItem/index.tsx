@@ -12,10 +12,12 @@ type Props = RectButtonProps & {
     city: string;
     uf: string;
     screenShot: string;
-
+    size: number;
+    icon?: any;
+    handleRigthDelete?: () => void;
 }
 
-export function ListItem({ name, city, uf, screenShot, ...rest }: Props) {
+export function ListItem({ name, city, uf, screenShot, size, icon, handleRigthDelete, ...rest }: Props) {
     return (
         <RectButton
             style={styles.container}
@@ -24,7 +26,7 @@ export function ListItem({ name, city, uf, screenShot, ...rest }: Props) {
         >
             <View>
                 <Image
-                    source={{uri: screenShot}}
+                    source={{ uri: screenShot }}
                     style={styles.imgPet}
                     resizeMode="cover"
                 />
@@ -35,9 +37,9 @@ export function ListItem({ name, city, uf, screenShot, ...rest }: Props) {
             </View>
             <View>
                 <Entypo
-                    name="chevron-thin-right"
+                    name={icon}
                     color={theme.colors.textColorWhite}
-                    size={16}
+                    size={size}
                 />
             </View>
 
