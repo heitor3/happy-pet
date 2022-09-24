@@ -25,6 +25,10 @@ export function Home() {
     navigate('myPets')
   }
 
+  function handleDonation() {
+    navigate('donation')
+  }
+
   return (
     <View style={styles.container}>
       <Header />
@@ -55,6 +59,7 @@ export function Home() {
         <View style={styles.buttonAction}>
           <ButtonAction
             title="Fazer doação 💸"
+            onPress={handleDonation}
           />
         </View>
 

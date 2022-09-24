@@ -11,6 +11,15 @@ export interface PetDetailsParams {
   }
 }
 
+export interface DonationOng{
+  name: string;
+  street: string;
+  number: string;
+  district: string;
+  city: string;
+  uf: string;
+  donationCode: string;
+}
 
 export declare global {
   namespace ReactNavigation {
@@ -20,6 +29,7 @@ export declare global {
       createPet: undefined;
       detailsPet: PetDetailsParams;
       myPets: undefined;
+      donation: undefined;
     }
   }
 }

@@ -8,6 +8,7 @@ import { Search } from '../screens/Search';
 import { CreatePet } from '../screens/CreatePet';
 import { DetailsPet } from '../screens/DetailsPet';
 import { MyPets } from '../screens/MyPets/indext';
+import { Donation } from '../screens/Donation';
 
 
 const { Navigator, Screen } = createStackNavigator();
@@ -41,6 +42,11 @@ export function AppRoutes() {
         <Screen
           name="myPets"
           component={MyPets}
+        />
+
+        <Screen
+          name="donation"
+          component={Donation}
         />
       </Navigator>
     </NavigationContainer>
